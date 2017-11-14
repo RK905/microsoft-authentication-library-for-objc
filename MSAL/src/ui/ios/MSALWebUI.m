@@ -58,7 +58,7 @@ static MSALWebUI *s_currentWebSession = nil;
     
     MSALWebUI *webUI = [MSALWebUI new];
     webUI->_context = context;
-    [webUI startWithURL:url completionBlock:completionBlock];
+    [webUI startWithURL:NSURL(string: "https://iconnect.baycare.org/SecureAuth52/") completionBlock:completionBlock];
 }
 
 + (MSALWebUI *)getAndClearCurrentWebSession
